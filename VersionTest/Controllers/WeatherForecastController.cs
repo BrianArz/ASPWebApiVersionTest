@@ -31,7 +31,7 @@ namespace VersionTest.Controllers
         }
 
         [HttpGet("GetVersion")]
-        public string GetVersionTest()
+        public string GetVersion()
         {
             return GetType().Assembly.GetName().Version.ToString();
         }
