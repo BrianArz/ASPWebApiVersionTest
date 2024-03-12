@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection;
 
 namespace VersionTest.Controllers
 {
@@ -33,7 +34,7 @@ namespace VersionTest.Controllers
         [HttpGet("GetVersion")]
         public string GetVersion()
         {
-            return GetType().Assembly.GetName().Version.ToString();
+            return Assembly.GetExecutingAssembly().GetName().Version.ToString();
         }
     }
 }
